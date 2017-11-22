@@ -1,0 +1,43 @@
+<view class="calendar_top">
+  <view class="calendar_topBar">
+    <view class="calendar_top_desc">
+      <text class="calendar_text_desc"> {{calendar_desc[0]}}</text>
+      <text>{{calendar_startDate}}</text>
+      <text>{{calendar_startDate === calendar_today ? '今天' : calendar_startDesc}}</text>
+    </view>
+    <view class="calendar_top_desc">
+      <text class="calendar_text_desc"> {{calendar_desc[1]}}</text>
+      <text>{{calendar_endDate}}</text>
+      <text>{{calendar_endDesc}}</text>
+    </view>
+  </view>
+
+  <view class="calendar_midBar">
+    <view wx:for="{{calendar_bookTime_desc}}" wx:for-item="bookTime" data-arrange="{{bookTime.arrange}}" bindtap="setBookTime">{{bookTime.desc}}</view>
+  </view>
+
+  <view class="calendar_bottomBar">
+    <text wx:for="{{calendar_day}}" wx:for-item="day">{{day}}</text>
+  </view>
+</view>
+
+<view class="calendar_mid">
+  <block wx:for="{{calendar_calendar}}" wx:for-item="calendar">
+    <view class="calendar_view_box">
+      <text class="calendar_month_title">{{calendar.month}}月</text>
+      <view class="calendar_dayBox">
+        <view class="calendar_days_day" wx:for="{{calendar.day}}" wx:for-item="day"
+        data-pass="{{day.pass}}"
+        data-time="{{day.time}}"
+        bindtap="selectTimeRange">
+        <text class="calendar_days {{(calendar_setStart <= day.time && calendar_setEnd >= day.time) ? 'calendar_days_active' : ''}} {{day.time && (calendar_setStart == day.time || calendar_setEnd == day.time) ? 'calendar_start_end' : ''}} {{day.pass ? 'calendar_days_pass' : ''}}">{{day.day}}
+        </text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+
+<view class="calendar_footer">
+  <view class="calendar_footer_btn" bindtap="submitTime">确定</view>
+</view>

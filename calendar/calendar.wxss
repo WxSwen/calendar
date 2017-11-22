@@ -1,0 +1,127 @@
+page{
+  background: #fff;
+  color: #fff;
+}
+.calendar_top{
+  padding: 20rpx;
+  position: fixed;
+  top: 0;
+  color: #FFFFFF;
+  background: #CCB174;
+  width: calc(100% - 40rpx);
+  z-index: 99;
+}
+.calendar_topBar{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20rpx 0;
+  font-size: 48rpx;
+  color: #FFFFFF;
+}
+.calendar_top_desc{
+  display: flex;
+  padding-left: 60rpx;
+  flex-direction: column;
+  width: 50%;
+}
+.calendar_top_desc:first-child{
+  border-right: 1rpx solid rgba(255,255,255,0.2);
+}
+.calendar_text_desc{
+  font-size: 24rpx;
+  opacity: 0.5;
+  color: #FFFFFF;
+}
+.calendar_midBar{
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.calendar_midBar view{
+  border: 1rpx solid #fff;
+  color: #fff;
+  font-size: 30rpx;
+  padding: 20rpx 108rpx;
+}
+.calendar_bottomBar{
+  margin-top: 24rpx;
+  display: flex;
+  justify-content: space-around;
+  font-size: 28rpx;
+  color: #fff;
+}
+.calendar_mid{
+  margin-top: 416rpx;
+  padding-bottom: 80rpx;
+}
+.calendar_dayBox{
+  padding: 0 20rpx 80rpx;
+}
+.calendar_view_box{
+  margin-top: 30rpx;
+}
+.calendar_month_title{
+  display: flex;
+  justify-content: center;
+  font-size: 30rpx;
+  color: #666666;
+  padding: 4rpx 0;
+  background: rgba(224,224,224,0.2);
+}
+.calendar_days_day{
+  height: 64rpx;
+  width: 101.4rpx;
+  border-radius: 100%;
+  display: inline-block;
+  text-align: center;
+  line-height: 64rpx;
+  font-size: 30rpx;
+  color: #666666;
+  margin-top: 52rpx;
+}
+.calendar_days{
+  display: inline-block;
+  width: 100%;
+}
+.calendar_days_active{
+  background: rgba(236,207,123,0.2);
+  color: #7D6832;
+}
+.calendar_start_end{
+  position: relative;
+  color: #7D6832;
+}
+.calendar_start_end:after{
+  content: '';
+  display: block;
+  background: #ECCF7B;
+  height: 108rpx;
+  width: 108rpx;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: -1;
+}
+.calendar_days_pass{
+  opacity: 0.5;
+}
+.calendar_footer{
+  width: 100%;
+  padding: 16rpx;
+  background: #fff;
+  box-shadow: 4px 0 6px 0 rgba(204,173,104,0.50);
+  position: fixed;
+  bottom: 0;
+}
+.calendar_footer_btn{
+  background: #CCAD68;
+  color: #fff;
+  width: calc(100% - 40rpx);
+  box-shadow: 0 4px 6px 0 rgba(204,173,104,0.50);
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+}
